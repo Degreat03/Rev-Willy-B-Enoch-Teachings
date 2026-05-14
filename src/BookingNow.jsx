@@ -65,7 +65,7 @@ const BookingNow = () => {
   return (
     <div className="max-w-5xl mx-auto p-6 bg-white shadow-2xl rounded-2xl my-10 md:my-20">
       <header className="mb-10 text-center">
-        <h1 className="text-3xl font-extrabold text-gray-800">Book an Appointment</h1>
+        <h1 className="text-3xl font-extrabold text-[#a52a2a]">Book an Appointment</h1>
         <p className="text-gray-500 mt-2">Select a convenient time for your spiritual counseling or meeting.</p>
       </header>
 
@@ -82,7 +82,7 @@ const BookingNow = () => {
                 onChange={setSelectedDate} 
                 value={selectedDate}
                 minDate={new Date()} 
-                className="rounded-xl border-gray-200 shadow-sm custom-calendar"
+                className="rounded-xl border-gray-200 shadow-sm text-[#a52a2a] custom-calendar"
               />
             </div>
           </section>

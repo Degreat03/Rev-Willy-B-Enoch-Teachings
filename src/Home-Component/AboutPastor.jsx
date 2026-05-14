@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function AboutPastor(){
     return(
         <div className='flex flex-col items-center jusstify-center'>
-            <h2 className="text-center text-xl md:text-4xl font-[600] my-[30px]">About The Pastor</h2>
+            <h2 className="text-center text-[#a52a2a] text-xl md:text-4xl font-[600] my-[30px]">About The Pastor</h2>
             <div className="flex flex-col lg:flex-row items-center justify-center text-center mx-auto gap-[20px] my-[40px] px-4">
                 <div>
                     <img 

@@ -26,7 +26,7 @@ function NavBar(){
                 {open ? "✕" : "☰"}
             </button>
             {open && (
-                <nav className="flex flex-col items-center bg-[#a52a2a] text-white sm:hidden w-full z-40 fixed p-6 gap-5 top-[72px] shadow-lg cursor-pointer">
+                <nav className="flex flex-col items-center bg-[#a52a2a8a] text-white sm:hidden w-full z-40 fixed p-6 gap-5 top-[72px] shadow-lg cursor-pointer">
                     <Link to="/" onClick={() => setOpen(false)}>Home</Link>
                     <Link to="/about" onClick={() => setOpen(false)}>About</Link>
                     <Link to="/teachings" onClick={() => setOpen(false)}>Rev Willy B. Teachings</Link>

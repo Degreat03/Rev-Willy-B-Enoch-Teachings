@@ -3,7 +3,7 @@ import MyPastorImg2 from "../assets/my-pastor2.jpeg"
 function History(){
     return(
         <div className="my-[70px]">
-           <h2 className="text-center text-xl md:text-4xl font-[600] my-[30px]">About The Pastor</h2>
+           <h2 className="text-center text-[#a52a2a] text-xl md:text-4xl font-[600] my-[30px]">About The Pastor</h2>
             <div className="flex flex-col lg:flex-row items-center justify-center text-center mx-auto gap-[30px] my-[40px] px-4">
                 <div>
                     <img 

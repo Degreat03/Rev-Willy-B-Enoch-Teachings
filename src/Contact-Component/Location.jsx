@@ -3,7 +3,7 @@
 function Location(){
     return(
         <div className="mt-[100px] mb-[120px]">
-            <h2 className="text-center text-2xl md:text-4xl font-[600] my-[30px]" >Contact Us</h2>
+            <h2 className="text-center text-[#a52a2a] text-2xl md:text-4xl font-[600] my-[30px]" >Contact Us</h2>
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center
             gap-[20px]
             ">

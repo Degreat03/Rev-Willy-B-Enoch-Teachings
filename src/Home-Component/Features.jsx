@@ -6,7 +6,7 @@ import YouthMinistry from "../assets/youth-ministry.jpg"
 function Features(){
     return(
         <div>
-            <h2 className="text-center text-xl md:text-4xl font-[600] my-[30px]">Teachings Categories</h2>
+            <h2 className="text-center text-[#a52a2a] text-xl md:text-4xl font-[600] my-[30px]">Teachings Categories</h2>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center 
             justify-items-center text-center max-w-[1000px] mx-auto
             gap-[10px] my-[40px]

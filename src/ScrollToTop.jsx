@@ -31,7 +31,7 @@ const ScrollToTop = () => {
         <button
           onClick={scrollToTop}
           className="p-[10px]  rounded-full bg-[#a52a2a] text-white shadow-2xl hover:bg-[#db3838] 
-          transition-all duration-300 animate-bounce w-[3rem] h-[3rem]"
+          transition-all duration-300 animate-bounce w-[3rem] h-[3rem] cursor-pointer"
           aria-label="Scroll to top"
         >
             <i className="bi bi-arrow-up text-[20px] font-[700]"></i>

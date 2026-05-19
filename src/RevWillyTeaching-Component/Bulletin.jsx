@@ -21,18 +21,18 @@ export default function Bulletin(){
             <div className="my-[30px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center 
             justify-items-center">
                 <div>
-                    <img src={img1} alt="Divine Marriage Series 2" className=" h-[100px] object-cover"/>
+                    <img src={img1} alt="Divine Marriage Series 2" className=" h-[97px] object-cover"/>
                     {/* Added the direct click handler here */}
                     <button onClick={handleClick2} className="w-full max-w-xs mx-auto bg-[#db3838] 
-                    text-white font-medium cursor-pointer">
+                    text-white font-medium cursor-pointer py-[8px]">
                         Download
                     </button>
                 </div>
                 <div>
-                    <img src={img2} alt="Divine Marriage Series 1" className=" h-[100px] object-cover"/>
+                    <img src={img2} alt="Divine Marriage Series 1" className=" h-[97px] object-cover"/>
                     {/* Added the direct click handler here */}
                     <button onClick={handleClick} className=" w-full max-w-xs mx-auto bg-[#db3838] 
-                    text-white font-medium cursor-pointer">
+                    text-white font-medium cursor-pointer py-[8px]">
                         Download
                     </button>
                 </div>

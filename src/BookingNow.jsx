@@ -2,12 +2,13 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 import { supabase } from './SupaBase.js'; 
 import 'react-calendar/dist/Calendar.css';
+import emailjs from "@emailjs/browser";
 
 const BookingNow = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
   const [isBooked, setIsBooked] = useState(false);
-  const [loading, setLoading] = useState(false); // Initialized to false
+  const [loading, setLoading] = useState(false);
 
   const timeSlots = ["09:00 AM", "10:00 AM", "11:00 AM", "01:00 PM", "02:00 PM", "04:00 PM"];
 
@@ -16,15 +17,20 @@ const BookingNow = () => {
     setLoading(true);
 
     const formData = new FormData(e.target);
+    const fullName = formData.get('fullName');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const reason = formData.get('reason');
     
-    // Note: Table name matches 'Appointments' from your Supabase screenshot
+    // 1. Save to Supabase Table
     const { error } = await supabase
       .from('Appointments') 
       .insert([
         {
-          full_name: formData.get('fullName'),
-          email: formData.get('email'),
-          reason: formData.get('reason'),
+          full_name: fullName,
+          email: email,
+          phone: phone,
+          reason: reason,
           appointment_date: selectedDate.toISOString().split('T')[0], 
           appointment_time: selectedTime,
         },
@@ -35,11 +41,36 @@ const BookingNow = () => {
       alert('Submission failed: ' + error.message);
       setLoading(false);
     } else {
-      setIsBooked(true);
-      setLoading(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // Better UX on mobile
+      // 2. Database insert succeeded -> Trigger EmailJS to notify the pastor
+      const emailParams = {
+        user_name: fullName,
+        user_email: email,
+        user_phone: phone,
+        appointment_date: selectedDate.toDateString(),
+        appointment_time: selectedTime,
+        booking_reason: reason
+      };
+
+      emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        setIsBooked(true); 
+        setLoading(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      })
+      .catch((mailError) => {
+        console.error('Failed to send email to pastor:', mailError);
+        // Still show the success UI screen since data saved to Supabase perfectly
+        setIsBooked(true);
+        setLoading(false);
+      });
     }
-  };
+  }; // Closes handleBooking
 
   // --- Success State View ---
   if (isBooked) {
@@ -126,6 +157,10 @@ const BookingNow = () => {
             <div>
               <label className="block text-xs font-bold uppercase text-gray-500 mb-1 ml-1">Email Address</label>
               <input name="email" type="email" required className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#db3838] bg-white outline-none" placeholder="email@example.com" />
+            </div>
+            <div>
+              <label className="block text-xs font-bold uppercase text-gray-500 mb-1 ml-1">Phone Number</label>
+              <input name="phonen" type="number" required className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#db3838] bg-white outline-none" placeholder="+234 789 670 5671" />
             </div>
             <div>
               <label className="block text-xs font-bold uppercase text-gray-500 mb-1 ml-1">Reason for Visit</label>

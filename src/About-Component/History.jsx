@@ -14,7 +14,7 @@ function History(){
                 </div>
             <div className="max-w-[700px]">
                 <p className="text-md leading-relaxed">
-                    Rev Willy Bigman Enoch. Is a Carry of Grace, ordained to preach the Gospel with the heart of love and compassion call as an Evangelist, with a prophetic grace, a Preacher and a Teacher of the Word, He is ordained minister with Christian Pentecostal Mission Int't, Born in 14th February 1980. From Abua Odual Local Government Area, Emago Kugbo, Rivers State, Nigeria. Married to Mrs Hope Willy Enoch and they are blessed with children.
+                    Rev Willy Bigman Enoch. Is a Carry of Grace, ordained to preach the Gospel with the heart of love and compassion call as an Evangelist, with a prophetic grace, a Preacher and a Teacher of the Word, He is ordained minister with Christian Pentecostal Mission Int'l, Born in 14th February 1980. From Abua Odual Local Government Area, Emago Kugbo, Rivers State, Nigeria. Married to Mrs Hope Willy Enoch and they are blessed with children.
                 </p>
                 </div>
             </div>   

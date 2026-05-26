@@ -1,4 +1,4 @@
-import LeaderShip from "../assets/leadership.jpg"
+import LeaderShip from "../assets/Leadership.png"
 import Marriage from "../assets/marriage.jpg"
 import SpiritualGrowth from "../assets/spiritual-growth.jpg"
 import YouthMinistry from "../assets/youth-ministry.jpg"
@@ -12,19 +12,19 @@ function Features(){
             gap-[10px] my-[40px]
             ">
                 <div>
-                    <img src={LeaderShip} alt="leadership image" className="h-[300px] w-[300px] rounded mb-[10px]"/>
+                    <img src={LeaderShip} alt="leadership image" className="h-[330px] w-[330px] rounded mb-[10px]"/>
                     <h3 className="text-xl font-[600]">Leadership</h3>
                 </div>
                 <div>
-                    <img src={Marriage} alt="marriage image" className="h-[300px] w-[300px] rounded mb-[10px]"/>
+                    <img src={Marriage} alt="marriage image" className="h-[330px] w-[330px] rounded mb-[10px]"/>
                     <h3 className="text-xl font-[600]">Marriage</h3>
                 </div>
                 <div>
-                    <img src={SpiritualGrowth} alt="spiritual growth image" className="h-[300px] w-[300px] rounded mb-[10px]"/>
+                    <img src={SpiritualGrowth} alt="spiritual growth image" className="h-[330px] w-[330px] rounded mb-[10px]"/>
                     <h3 className="text-xl font-[600]">Spiritual growth</h3>
                 </div>
                 <div>
-                    <img src={YouthMinistry} alt="Youth image" className="h-[300px] w-[300px] rounded mb-[10px]"/>
+                    <img src={YouthMinistry} alt="Youth image" className="h-[330px] w-[330px] rounded mb-[10px]"/>
                     <h3 className="text-xl font-[600]">Youth Ministry</h3>
                 </div>
             </div>

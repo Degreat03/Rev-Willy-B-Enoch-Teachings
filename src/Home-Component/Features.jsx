@@ -1,6 +1,6 @@
 import LeaderShip from "../assets/Leadership.png"
 import Marriage from "../assets/marriage.png"
-import SpiritualGrowth from "../assets/spiritual-growth.png"
+import SpiritualGrowth from "../assets/spiritual-growth.jpeg"
 import YouthMinistry from "../assets/youth-ministry.jpg"
 
 function Features(){

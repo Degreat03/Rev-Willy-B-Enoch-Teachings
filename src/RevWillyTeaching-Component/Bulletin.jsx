@@ -1,10 +1,12 @@
 import img1 from "../assets/one-plus-one-in-marriage-2.png"
 import img2 from "../assets/one-plus-one-in-marriage-1.png"
+import img3 from "../assets/one-plus-one-in-marriage-3.png"
 
 export default function Bulletin(){
     // Points directly to the file inside your public folder
     const pdfUrl = "https://drive.google.com/file/d/1miMRzzhscvLwEzrODuu8EMuoc_XPAXrj/view?usp=drive_link";
-    const pdfUrl2 = "https://drive.google.com/file/d/1k-pSnusknLegKpVuEWElaLQo1RJl1I4D/view?usp=drive_link"
+    const pdfUrl2 = "https://drive.google.com/file/d/1k-pSnusknLegKpVuEWElaLQo1RJl1I4D/view?usp=drive_link";
+    const pdfUrl3 = "https://drive.google.com/file/d/1vaaPOSuTirHLn9Qb6TByGuClSMOZmsRl/view?usp=drive_link";
 
     function handleClick(){
         window.open(pdfUrl, "_blank");
@@ -12,6 +14,9 @@ export default function Bulletin(){
 
     function handleClick2(){
         window.open(pdfUrl2, "_blank");
+    }
+    function handleClick3(){
+        window.open(pdfUrl3, "_blank");
     }
 
     return(
@@ -21,7 +26,7 @@ export default function Bulletin(){
             <div className="my-[30px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center 
             justify-items-center">
                 <div>
-                    <img src={img1} alt="Divine Marriage Series 2" className=" h-[97px] object-cover"/>
+                    <img src={img1} alt="Divine Marriage Series 2" className="w-[300px] h-[97px] object-cover"/>
                     {/* Added the direct click handler here */}
                     <button onClick={handleClick2} className="w-full max-w-xs mx-auto bg-[#db3838] 
                     text-white font-medium cursor-pointer py-[8px]">
@@ -29,9 +34,17 @@ export default function Bulletin(){
                     </button>
                 </div>
                 <div>
-                    <img src={img2} alt="Divine Marriage Series 1" className=" h-[97px] object-cover"/>
+                    <img src={img2} alt="Divine Marriage Series 1" className="w-[300px]  h-[97px] object-cover"/>
                     {/* Added the direct click handler here */}
                     <button onClick={handleClick} className=" w-full max-w-xs mx-auto bg-[#db3838] 
+                    text-white font-medium cursor-pointer py-[8px]">
+                        Download
+                    </button>
+                </div>
+                <div>
+                    <img src={img3} alt="Divine Marriage Series 1" className=" w-[300px] h-[97px] object-cover"/>
+                    {/* Added the direct click handler here */}
+                    <button onClick={handleClick3} className=" w-full max-w-xs mx-auto bg-[#db3838] 
                     text-white font-medium cursor-pointer py-[8px]">
                         Download
                     </button>

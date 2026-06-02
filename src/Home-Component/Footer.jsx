@@ -20,7 +20,7 @@ function Footer(){
                     <div className="flex flex-col text-sm gap-2">
                         <Link to="/" className="hover:underline">Home</Link>
                         <Link to="/about" className="hover:underline">About</Link>
-                        <Link to="/teachings" className="hover:underline">Rev Willy B. Teachings</Link>
+                        <Link to="/message" className="hover:underline">Rev Willy B. Message</Link>
                     </div>
                 </nav>
 

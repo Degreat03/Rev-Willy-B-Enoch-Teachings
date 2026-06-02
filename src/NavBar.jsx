@@ -15,7 +15,7 @@ function NavBar(){
             <nav className="flex items-center gap-[20px] font-[600] hidden sm:flex">
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/teachings">Rev Willy B. Teachings</Link>
+                <Link to="/message">Rev Willy B. Message</Link>
                 <Link to="/contact">Contact</Link>
             </nav>
             {/* Toggle Button for Mobile */}
@@ -29,7 +29,7 @@ function NavBar(){
                 <nav className="flex flex-col items-center bg-[#a52a2a8a] text-white sm:hidden w-full z-40 fixed p-6 gap-5 top-[72px] shadow-lg cursor-pointer">
                     <Link to="/" onClick={() => setOpen(false)}>Home</Link>
                     <Link to="/about" onClick={() => setOpen(false)}>About</Link>
-                    <Link to="/teachings" onClick={() => setOpen(false)}>Rev Willy B. Teachings</Link>
+                    <Link to="/message" onClick={() => setOpen(false)}>Rev Willy B. Message</Link>
                     <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
                 </nav>
             )}

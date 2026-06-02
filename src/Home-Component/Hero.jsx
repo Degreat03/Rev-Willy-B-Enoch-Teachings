@@ -9,7 +9,7 @@ function Hero(){
             url(${Bible})` }}
         >
             <div className="flex flex-col items-center justify-center mt-[30px]" >
-                <h1 className="text-3xl md:text-5xl text-bold drop-shadow-lg">Rev Willy B. Enoch Teachings</h1>
+                <h1 className="text-3xl md:text-5xl text-bold drop-shadow-lg">Rev Willy B. Enoch Message</h1>
                 <p className="italic mt-[10px]">Empowering Your Faith Through the Word</p>
                 <Link to="/contact">
                 <button className="bg-[#a52a2a] text-white mt-[10px] px-[25px] py-[5px] 
